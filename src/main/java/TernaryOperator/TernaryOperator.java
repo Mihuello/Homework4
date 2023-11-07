@@ -7,9 +7,7 @@ public class TernaryOperator {
         System.out.println(result);
         return result;
     }
-
     public static void main(String[] args) {
-
         convertNumber(3);
     }
 }

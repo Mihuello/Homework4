@@ -1,23 +1,23 @@
 package Apples;
 
 public class Apples {
-    public static void NumberOfApples(String name, int apples) {
-        String[] apple = {"яблок", "яблоко", "яблока"};
-        int arbitraryVariable = apples % 10;
-        String result = null;
+    public static void NumberOfApples(String name, int apple) {
+        String[] apples = {"яблок", "яблоко", "яблока"};
+        int arbitraryVariable = apple % 10;
+        String result;
         switch (arbitraryVariable) {
             case 1:
-                result = apples == 11 ? apple[1] : apple[0];
+                result = apple == 11 ? apples[0] : apples[1];
                 break;
             case 2:
             case 3:
             case 4:
-                result = apples > 10 && apples < 20 ? apple[0] : apple[2];
+                result = apple > 10 && apple < 20 ? apples[0] : apples[2];
                 break;
             default:
-                result = apple[0];
+                result = apples[0];
         }
-        System.out.println(name + " хранит" + " " + apples + " " + result);
+        System.out.println(name + " хранит" + " " + apple + " " + result);
     }
 
     public static void main(String[] args) {

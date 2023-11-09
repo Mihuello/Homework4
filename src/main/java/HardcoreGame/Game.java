@@ -131,7 +131,6 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Готовы ли вы сыграть? да или нет?");
-
         scanner.hasNextLine();
         boolean b = scanner.nextLine().equalsIgnoreCase("да");
         return b;
@@ -168,13 +167,11 @@ public class Game {
     }
 
     static void reasonForEndingTheGame(List<Integer> array) {
-        String reason;
+        String reason = null;
         if (checkArrayIsEmpty(array)) {
             reason = "Больше чисел не осталось";
         } else if (!checkingAnArrayForTheSumOfNine(array)) {
             reason = "Данные числа не дают сумму 9 или одинаковых чисел рядом стоящих  не осталось ";
-        } else {
-            reason = "Одинаковых чисел рядом стоящих  не осталось";
         }
         System.out.println("Причина окончания игры: " + reason);
         System.out.println("Игровое поле после окончания игры: " + array);
